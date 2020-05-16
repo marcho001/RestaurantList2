@@ -1,6 +1,6 @@
-<div class="d-flex flex-column justify-content-center align-items-center">
+<div class="d-flex flex-column justify-content-center align-items-center mt-4">
   <h1 class="mb-2 display-3 font-weight-bold" style="font-family: monospace, sans-serif;">{{list.name}}</h1>
-  <img class="mb-3" style="max-width: 600px;" src="{{list.image}}" alt="restaurant">
+  <img class="m-3" style="max-width: 600px;" src="{{list.image}}" alt="restaurant">
   <div class="m-3">
     <div class="mb-2">
       <svg class="bi bi-phone mr-1" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor"
@@ -35,5 +35,11 @@
     </div>
   </div>
   <div style="width: 600px;">{{list.description}}</div>
+  <div class="mt-3 d-flex">
+    <form action="/restaurant/{{list._id}}/delete" method="post">
+     <button type="submit" class="btn btn-danger mr-3">DELETE</button>
+    </form>
+    <a href="#" class="btn btn-success">EDIT</a>
+  </div>
 
 </div>

@@ -29,9 +29,18 @@ app.get('/', (req, res) => {
     .catch(error => console.log('error')) 
 })
 
-app.get('/restaurant/:list_id', (req, res) => {
-  let targetList = list.results.find(item => item.id.toString() === req.params.list_id)
-  res.render('show', { list: targetList })
+app.get('/restaurant/:id', (req, res) => {
+  return Restaurants.findById(req.params.id)
+    .lean()
+    .then(list => res.render('show',{ list }))
+    .catch(error => console.log(error))
+})
+
+app.post('/restaurant/:id/delete', (req, res) => {
+  return Restaurants.findById(req.params.id)
+    .then(list => list.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
 })
 
 app.get('/search', (req, res) => {
