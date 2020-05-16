@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+
+<body>
+  <div class="top-section d-flex-col">
+    <div class="top bg-light p-3">
+      <div class="d-flex justify-content-around align-items-center">
+        <a href="https://icons8.com/icon/93Pyeq47Ij5z/taco">
+          <img src="https://img.icons8.com/wired/64/000000/taco.png" />
+        </a>
+        <a href="https://icons8.com/icon/SjDF1-cb83WH/eights">
+          <img src="https://img.icons8.com/wired/64/000000/eights.png" />
+        </a>
+        <a href="https://icons8.com/icon/98811/noodles">
+          <img src="https://img.icons8.com/wired/64/000000/noodles.png" />
+        </a>
+        <a href="https://icons8.com/icon/98765/brezel">
+          <img src="https://img.icons8.com/wired/64/000000/bavarian-pretzel.png" />
+        </a>
+        <a href="https://icons8.com/icon/uE3Pc88DxdYF/melting-ice-cream">
+          <img src="https://img.icons8.com/wired/64/000000/melting-ice-cream.png" />
+        </a>
+        <a href="https://icons8.com/icon/98787/italian-pizza">
+          <img src="https://img.icons8.com/wired/64/000000/italian-pizza.png" />
+        </a>
+      </div>
+
+
+    </div>
+    <div class="down bg-dark d-flex justify-content-center">
+      <p class="text-light font-weight-bold align-self-center mt-4" style="font-size: 45px; font-family:fantasy;">Restaurant List</p>
+    </div>
+  </div>
+  <div class="search d-flex justify-content-between m-2">
+    <a href="/" class="text-dark m-3">
+      <svg class="bi bi-house-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M8 3.293l6 6V13.5a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z"
+          clip-rule="evenodd" />
+        <path fill-rule="evenodd"
+          d="M7.293 1.5a1 1 0 011.414 0l6.647 6.646a.5.5 0 01-.708.708L8 2.207 1.354 8.854a.5.5 0 11-.708-.708L7.293 1.5z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+    <form action="/search" class="border-bottom">
+      <input type="text" name="keywords" class="border-0" style="outline: none;">
+      <button type="submit" class="btn  rounded-circle border-dark m-2">
+        <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+            clip-rule="evenodd" />
+          <path fill-rule="evenodd"
+            d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+    </form>
+  </div>
+  <div class="body-section bg-light p-2 row d-flex justify-content-center">
+    {{{body}}}
+  </div>
+
+
+  <script src="/javascripts/jquery-3.3.1.js"></script>
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</body>
+
+</html>

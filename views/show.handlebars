@@ -1,0 +1,39 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h1 class="mb-2 display-3 font-weight-bold" style="font-family: monospace, sans-serif;">{{list.name}}</h1>
+  <img class="mb-3" style="max-width: 600px;" src="{{list.image}}" alt="restaurant">
+  <div class="m-3">
+    <div class="mb-2">
+      <svg class="bi bi-phone mr-1" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z"
+          clip-rule="evenodd" />
+        <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+      </svg>
+      電話 ： {{list.phone}}
+      <span class="bg-light text-muted p-2">
+        <svg class="bi bi-bookmarks mr-1" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M7 13l5 3V4a2 2 0 00-2-2H4a2 2 0 00-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V4a1 1 0 00-1-1H4a1 1 0 00-1 1v10.234z"
+            clip-rule="evenodd" />
+          <path d="M14 14l-1-.6V2a1 1 0 00-1-1H4.268A2 2 0 016 0h6a2 2 0 012 2v12z" />
+        </svg>
+        {{list.category}}
+      </span>
+    </div>
+    <div>
+      <svg class="bi bi-map mr-1" width="1.2em" height="1.2em" viewBox="0 0 16 16" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M15.817.613A.5.5 0 0116 1v13a.5.5 0 01-.402.49l-5 1a.502.502 0 01-.196 0L5.5 14.51l-4.902.98A.5.5 0 010 15V2a.5.5 0 01.402-.49l5-1a.5.5 0 01.196 0l4.902.98 4.902-.98a.5.5 0 01.415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"
+          clip-rule="evenodd" />
+      </svg>
+      地址：
+      <a href="{{list.google_map}}">{{list.location}}
+      </a>
+    </div>
+  </div>
+  <div style="width: 600px;">{{list.description}}</div>
+
+</div>
