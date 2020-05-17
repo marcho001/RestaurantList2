@@ -92,6 +92,11 @@ app.post('/restaurant/:id/edit', (req, res) => {
     .catch(error => console.log(error))
 })
 
+app.post('/restaurant', (req, res) => {
+
+  return Restaurants.create(req.body)
+})
+
 app.listen(port, () => {
   console.log('yoyo now is working')
 })
