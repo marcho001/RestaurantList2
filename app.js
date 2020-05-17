@@ -21,7 +21,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ extend :true }))
+app.use(bodyParser.urlencoded({ extend: true }))
 
 app.get('/', (req, res) => {
   Restaurants.find()
@@ -55,26 +55,25 @@ app.get('/create', (req, res) => {
   return res.render('create')
 })
 app.get('/search', (req, res) => {
-const query = req.query.keywords.toLowerCase()
+  const query = req.query.keywords.toLowerCase()
   return Restaurants.find()
     .lean()
     .then((lists) => {
       const list = []
       console.log(lists)
       lists.forEach((item) => {
-        if (item.name.toLowerCase().includes(query)){
-          list.push(item) 
-        } else if (item.category.toLowerCase().includes(query)){
-          list.push(item) 
-        } else if (item.rating.toLowerCase().includes(query)){
-          list.push(item) 
+        if (item.name.toLowerCase().includes(query)) {
+          list.push(item)
+        } else if (item.category.toLowerCase().includes(query)) {
+          list.push(item)
+        } else if (item.rating.toLowerCase().includes(query)) {
+          list.push(item)
         }
       })
       return list
     })
     .then(list => res.render('index', { list }))
     .catch(error => console.log(error))
- 
 })
 
 app.post('/restaurant/:id/edit', (req, res) => {
@@ -108,6 +107,8 @@ app.post('/restaurant/:id/edit', (req, res) => {
 
 app.post('/restaurant', (req, res) => {
   return Restaurants.create(req.body)
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
 })
 
 app.listen(port, () => {
