@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center p-5">
+  <form action="/restaurant" method="POST" id="create"
+    class="bg-white shadow rounded p-4 rounded-lg d-flex flex-column align-items-center">
+
+    <div class="m-3">
+      <span class="h4">餐廳名稱 ：</span>
+      <input type="text" name="name" placeholder="請輸入餐廳名稱" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳類別 ：</span>
+      <input type="text" name="category" placeholder="請輸入餐廳類別" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳地址 ：</span>
+      <input type="text" name="location" placeholder="請輸入餐廳地址" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳電話 ：</span>
+      <input type="text" name="phone" placeholder="請輸入餐廳電話" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳評分 ：</span>
+      <input type="text" name="rating" placeholder="請輸入餐廳評分" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳概述 ：</span>
+      <textarea name="description" placeholder="請輸入餐廳概述" class="rounded ml-3 h4" form="create"
+        style="outline: none; width: 500px; height: 150px; resize: none;">{{list.description}}
+          </textarea>
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳照片 ：</span>
+      <input type="text" name="image" placeholder="請輸入餐廳照片位置" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <div class="m-3">
+      <span class="h4">餐廳連結 ：</span>
+      <input type="text" name="google_map" placeholder="請輸入餐聽google map 連結" class="rounded ml-3 h4"
+        style="outline: none; width: 500px; height: 50px;">
+    </div>
+    <button type="submit" class="btn btn-success mt-4">新增</button>
+
+
+  </form>
+
+</div>
